@@ -18,6 +18,10 @@ public class EventManager {
         this.plugin = plugin;
     }
 
+    public void stopEvent() {
+        this.event = null;
+    }
+
     public void setEvent(Event event) {
         this.event = event;
     }

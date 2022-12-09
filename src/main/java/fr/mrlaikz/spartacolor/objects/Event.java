@@ -85,6 +85,7 @@ public class Event implements FallListener, PlayerListener {
             pl.teleport(SpartaColor.getInstance().getConfig().getLocation("locations.spawn"));
             pl.sendMessage("§aGAGNÉ");
         }
+        SpartaColor.getInstance().getEventManager().stopEvent();
     }
 
     //PLAYER MANAGMENT

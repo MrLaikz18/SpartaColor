@@ -1,5 +1,6 @@
 package fr.mrlaikz.spartacolor;
 
+import fr.mrlaikz.spartacolor.commands.ColorCMD;
 import fr.mrlaikz.spartacolor.listeners.MoveListener;
 import fr.mrlaikz.spartacolor.managers.EventManager;
 import fr.mrlaikz.spartacolor.managers.MapManager;
@@ -15,12 +16,16 @@ public final class SpartaColor extends JavaPlugin {
     @Override
     public void onEnable() {
         //VARS
+        saveDefaultConfig();
         this.instance = this;
         this.eventManager = new EventManager(this);
         this.mapManager = new MapManager(this);
 
         //LISTENERS
         getServer().getPluginManager().registerEvents(new MoveListener(this), this);
+
+        //COMMANDS
+        getCommand("color").setExecutor(new ColorCMD(this));
 
         //MISC
         System.out.println("Plugin Actif");

@@ -2,3 +2,6 @@ name: SpartaColor
 version: '${project.version}'
 main: fr.mrlaikz.spartacolor.SpartaColor
 api-version: 1.19
+commands:
+  color:
+    description: "Color Event Command"
